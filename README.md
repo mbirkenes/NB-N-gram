@@ -7,7 +7,7 @@ To install:
 1. Create a virtual environment and install the packages in `requirements.txt`
 2. Download the SQLite databases from [Språkbanken's repository](https://www.nb.no/sprakbanken/ressurskatalog/oai-nb-no-sbr-76/) or provide your own data
 3. Configure the paths to the databases and the database schema in `backend.py`
-4. Set the environment variable `FLASK_NGRAM_SETTINGS` to point to your Flask configuration file (eg. different settings for production and development machines): an example development configruation file is found in `flask-example-devsettings.cfg`
+4. Set the environment variable `FLASK_NGRAM_SETTINGS` to point to your Flask configuration file (eg. different settings for production and development machines): an example development configuration file is found in `flask-example-devsettings.cfg`
 5. Start the session with `python backend.py`, listens at 127.0.0.1:5000 per default (for development only!) or run it behind a WSGI server like UWSGI or Gunicorn (production use)
 
 ## License
