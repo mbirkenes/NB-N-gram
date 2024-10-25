@@ -7,15 +7,12 @@
 from pysqlite2 import dbapi2 as sqlite3
 from collections import Counter
 from operator import itemgetter
-from itertools import chain
-from flask import Flask, Response, request, session, g, redirect, url_for, \
-     abort, render_template, flash, jsonify
-from contextlib import closing
+
+from flask import Flask, Response, request, g, render_template
+
 import re
 import json
 import sys
-import operator
-import itertools
 
 ## CONFIGURATION
 # path to databases
@@ -55,7 +52,7 @@ languages = 'all|nob|nno'
 corpora = 'bok|avis'
 
 # Default paramaters
-default_params = {'terms': '', 'lang': 'all', 'case_sens': '0', 'freq': 'rel', 'corpus': 'bok'};
+default_params = {'terms': '', 'lang': 'all', 'case_sens': '0', 'freq': 'rel', 'corpus': 'bok'}
 
 # Maximum values
 maxTerms = 10
