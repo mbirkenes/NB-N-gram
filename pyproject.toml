@@ -2,10 +2,25 @@
 name = "nb-n-gram"
 version = "0.1.0"
 description = "A trend viewer that shows you the development of word frequencies in the digitized material at the National Library of Norway."
+authors = [
+    {name = "DH-lab", email = "dh-lab@nb.no"},
+]
 readme = "README.md"
 requires-python = ">=3.10"
+license = {text = "Apache License (2.0)"}
 dependencies = [
-    "dhlab>=2.40.0",
-    "fastapi>=0.115.3",
-    "flask>=3.0.3",
+    "dhlab==2.41.0",
+    "fastapi==0.115.5",
+    "flask==3.1.0",
+    "gunicorn>=23.0.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "ruff>=0.7.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
